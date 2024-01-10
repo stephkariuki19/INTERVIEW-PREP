@@ -1,8 +1,8 @@
 class ProductCalculator:
     def product(self, nums):
-        res = [1] *(len(nums))
+        res = [1] *(len(nums))  #makes space complexity O(n)
         prefix = 1
-        for i in range(len(nums)):
+        for i in range(len(nums)): #iterating through the list of n elements time complexity O(n)
             res[i] = prefix
             prefix *=nums[i]
         postfix =1 
