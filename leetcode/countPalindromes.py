@@ -19,3 +19,4 @@ class Solution:
         
 m = Solution()
 print(m.countAllPali('abba'))
+#the time complexity is o(n)**2 because we check every character (n) for palindromes and expand to the end of the array (n) so n*n
