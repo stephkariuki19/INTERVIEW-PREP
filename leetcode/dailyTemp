@@ -1,0 +1,29 @@
+#traverse from right
+  class Solution(object):
+    def dailyTemperatures(self, temperatures):
+        output = [0] * len(temperatures)
+        stack = []
+        
+        for i in range(len(temperatures) - 1, -1, -1):
+            while stack and temperatures[i] >= temperatures[stack[-1]]:
+                stack.pop()
+                
+            if stack:  # If stack isn't empty
+                output[i] = stack[-1] - i
+            
+            stack.append(i)
+        
+        return output
+    #traverse from left 
+     
+def daily(temperatures):
+        output = [0] * len(temperatures)
+        stack = []
+
+        for i in range(len(temperatures)):
+            while stack and temperatures[i] > temperatures[stack[-1]]:
+                idx = stack.pop()
+                output[idx] = i - idx
+            stack.append(i)
+
+        return output     
