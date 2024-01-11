@@ -1,4 +1,4 @@
-#LENGTH OF LONGEST SUBSTRING
+#LENGTH OF LONGEST SUBSTRING WITHOUT REPEATING CHARACTER
 #(utilizes sliding window to assign the dictionary values of len of substring at each character)
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
@@ -6,7 +6,7 @@ class Solution(object):
         n = len(s)
         i = 0
         lookup = {}
-        while i < n:
+        while i < n: #can use for loop then remove no 17
             if s[i] not in lookup:
                 cur += 1
             else:
