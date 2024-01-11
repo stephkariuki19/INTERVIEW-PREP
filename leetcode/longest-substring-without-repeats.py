@@ -2,7 +2,7 @@
 #(utilizes sliding window to assign the dictionary values of len of substring at each character)
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
-        cur, max_length, start = 0, 0, 0
+        cur, max_length, start = 0, 0, 0 #cur tracks length of longest needed substring,start helps know the lenght of needed ans when a repeating character is found
         n = len(s)
         i = 0
         lookup = {}
