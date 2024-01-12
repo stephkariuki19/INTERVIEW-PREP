@@ -12,7 +12,7 @@ class Solution(object):
             else:
                 start = max(start, lookup[s[i]])
                 cur = i - start #eg 1-1=0 for a 
-            lookup[s[i]] = i
+            lookup[s[i]] = i #if we have found a new index for a character,update that index
             max_length = max(cur, max_length)
             i += 1
         return max_length
