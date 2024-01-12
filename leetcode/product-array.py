@@ -1,4 +1,4 @@
-PRODUCT OF ARRAY EXCEPT SELF
+#WRONG!!!!
 class Solution(object):
     def productExceptSelf(self, nums):
         output = []
