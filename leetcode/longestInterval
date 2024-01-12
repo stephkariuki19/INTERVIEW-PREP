@@ -1,0 +1,17 @@
+class Solution(object):
+    def eraseOverlapIntervals(self, intervals):
+        if not intervals or len(intervals) == 1:
+            return 0
+        
+        intervals.sort(key=lambda x: x[1])  # Sort intervals based on the end time
+        
+        count = 0
+        end = intervals[0][1]
+        
+        for i in range(1, len(intervals)):
+            if intervals[i][0] < end:  # If the current interval overlaps
+                count += 1  # Increment count as we need to remove an interval
+            else:
+                end = intervals[i][1]  # Update the end time
+            
+        return count
