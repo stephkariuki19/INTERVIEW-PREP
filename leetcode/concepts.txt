@@ -1,0 +1,6 @@
+The term "asymptotic" emphasizes the behavior of the algorithm as it approaches very large input sizes without necessarily reaching them.
+  def say_hi_n_times(n):     
+for time in xrange(n):        
+print "hi" -> still gives constant space complexity ,doesnt keep track of vars or how input grows 
+  
+With big O notation we express the runtime in terms of—brace yourself—how quickly it grows relative to the input, as the input gets arbitrarily large.
